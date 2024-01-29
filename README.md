@@ -1,5 +1,12 @@
 # Java- Databases: Group By & Having
 
+
+select order_details.*, products.product_name 
+from order_details 
+join products
+on order_details.product_id = products.product_id
+where ((order_details.unit_price * order_details.quantity) - order_details.discount) > 300;
+
 1. Select all orders that have total price greater than 300.
 
 2. Select only employees that have more than 100 orders.
